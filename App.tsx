@@ -4,6 +4,7 @@ import Dashboard from './components/Dashboard';
 
 import ImageEditor from './components/ImageEditor';
 import { ViewState } from './types';
+import { LanguageProvider } from './context/LanguageContext';
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<ViewState>('HOME');
@@ -32,23 +33,23 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="relative flex h-full min-h-screen w-full max-w-md mx-auto flex-col overflow-hidden shadow-2xl bg-background-dark">
-      <Header
-        showBack={currentView !== 'HOME'}
-        onBack={handleBack}
-      />
+    <LanguageProvider>
+      <div className="relative flex h-full min-h-screen w-full max-w-md mx-auto flex-col overflow-hidden shadow-2xl bg-background-dark">
+        <Header
+          showBack={currentView !== 'HOME'}
+          onBack={handleBack}
+        />
 
-      {/* Main Content Area with Animation */}
-      <div
-        key={currentView}
-        className={`flex-1 flex flex-col w-full overflow-hidden ${getAnimationClass()}`}
-      >
-        {currentView === 'HOME' && <Dashboard onNavigate={handleNavigate} />}
-        {currentView === 'DIGITAL_MEMORY' && <ImageEditor />}
+        {/* Main Content Area with Animation */}
+        <div
+          key={currentView}
+          className={`flex-1 flex flex-col w-full overflow-hidden ${getAnimationClass()}`}
+        >
+          {currentView === 'HOME' && <Dashboard onNavigate={handleNavigate} />}
+          {currentView === 'DIGITAL_MEMORY' && <ImageEditor />}
+        </div>
       </div>
-
-
-    </div>
+    </LanguageProvider>
   );
 };
 

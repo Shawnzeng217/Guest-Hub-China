@@ -1,5 +1,6 @@
 import React from 'react';
 import { ViewState } from '../types';
+import { useLanguage } from '../context/LanguageContext';
 
 interface DashboardProps {
   onNavigate: (view: ViewState) => void;
@@ -13,6 +14,8 @@ declare global {
 }
 
 const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
+  const { t } = useLanguage();
+  
   const handleCardClick = (cardName: string, url: string) => {
     console.log('Card clicked:', cardName); // Debug log
     if (window.gtag) {
@@ -42,11 +45,11 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
           <div className="absolute inset-0 bg-black/50 z-0 backdrop-blur-[0.5px]"></div>
 
           <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors relative z-10">
-            <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>language</span>
+            <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>translate</span>
           </div>
           <div className="relative z-10">
-            <h3 className="text-white text-lg font-semibold leading-tight mb-1">AI Translator</h3>
-            <p className="text-white text-xs italic">Real-time translation</p>
+            <h3 className="text-white text-lg font-semibold leading-tight mb-1">{t.cards.translator.title}</h3>
+            <p className="text-white text-xs italic">{t.cards.translator.desc}</p>
           </div>
         </a>
 
@@ -67,8 +70,8 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
             <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>photo_camera</span>
           </div>
           <div className="relative z-10">
-            <h3 className="text-white text-lg font-semibold leading-tight mb-1">Snap & Eat</h3>
-            <p className="text-white text-xs italic">Identify food instantly</p>
+            <h3 className="text-white text-lg font-semibold leading-tight mb-1">{t.cards.snapAndEat.title}</h3>
+            <p className="text-white text-xs italic">{t.cards.snapAndEat.desc}</p>
           </div>
         </a>
 
@@ -89,8 +92,8 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
             <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>luggage</span>
           </div>
           <div className="relative z-10">
-            <h3 className="text-white text-lg font-semibold leading-tight mb-1">Digital Concierge</h3>
-            <p className="text-white text-xs italic">Digital in-stay journey</p>
+            <h3 className="text-white text-lg font-semibold leading-tight mb-1">{t.cards.concierge.title}</h3>
+            <p className="text-white text-xs italic">{t.cards.concierge.desc}</p>
           </div>
         </a>
 
@@ -111,8 +114,8 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
             <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>fitness_center</span>
           </div>
           <div className="relative z-10">
-            <h3 className="text-white text-lg font-semibold leading-tight mb-1">Magic Mirror</h3>
-            <p className="text-white text-xs italic">Smart fitness coach</p>
+            <h3 className="text-white text-lg font-semibold leading-tight mb-1">{t.cards.fitness.title}</h3>
+            <p className="text-white text-xs italic">{t.cards.fitness.desc}</p>
           </div>
         </a>
 
@@ -125,8 +128,8 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
             <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>add</span>
           </div>
           <div>
-            <h3 className="text-white/80 text-lg font-semibold leading-tight mb-1">Coming Soon</h3>
-            <p className="text-white/60 text-xs italic">More tools arriving...</p>
+            <h3 className="text-white/80 text-lg font-semibold leading-tight mb-1">{t.cards.comingSoon.title}</h3>
+            <p className="text-white/60 text-xs italic">{t.cards.comingSoon.desc}</p>
           </div>
         </div>
 
@@ -139,8 +142,8 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
             <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>add</span>
           </div>
           <div>
-            <h3 className="text-white/80 text-lg font-semibold leading-tight mb-1">Coming Soon</h3>
-            <p className="text-white/60 text-xs italic">More tools arriving...</p>
+            <h3 className="text-white/80 text-lg font-semibold leading-tight mb-1">{t.cards.comingSoon.title}</h3>
+            <p className="text-white/60 text-xs italic">{t.cards.comingSoon.desc}</p>
           </div>
         </div>
       </div>
@@ -153,10 +156,10 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
         ></div>
         <div className="absolute inset-0 bg-hilton-blue/80 mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex flex-col justify-center px-6">
-          <p className="text-[#8dc0ce] text-xs font-bold uppercase tracking-wider mb-1">Exclusive Offer</p>
-          <h3 className="text-white text-xl font-serif font-medium">Dining Rewards</h3>
+          <p className="text-[#8dc0ce] text-xs font-bold uppercase tracking-wider mb-1">{t.promo.subtitle}</p>
+          <h3 className="text-white text-xl font-serif font-medium">{t.promo.title}</h3>
           <div className="flex items-center gap-2 mt-2 text-white text-sm font-medium group-hover:underline decoration-1 underline-offset-4">
-            <span>Learn more</span>
+            <span>{t.promo.cta}</span>
             <span className="material-symbols-outlined text-sm">arrow_forward</span>
           </div>
         </div>
@@ -165,4 +168,4 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
   );
 };
 
-export default Dashboard;
+export default Dashboard;
