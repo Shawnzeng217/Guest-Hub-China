@@ -33,10 +33,10 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
       <div className="grid grid-cols-2 gap-4">
         {/* Card 1: AI Translator */}
         <a
-          href="https://hilton-ai-translator.vercel.app/"
+          href="https://ai-translator-china.onrender.com/"
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => handleCardClick('AI Translator', 'https://hilton-ai-translator.vercel.app/')}
+          onClick={() => handleCardClick('AI Translator', 'https://ai-translator-china.onrender.com/')}
           className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left relative overflow-hidden animate-fadeInUp"
           style={{ animationDelay: '0ms' }}
         >
@@ -55,10 +55,10 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
 
         {/* Card 2: Snap & Eat */}
         <a
-          href="https://snap-and-eat.vercel.app/"
+          href="https://snap-eat-china.onrender.com/"
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => handleCardClick('Snap & Eat', 'https://snap-and-eat.vercel.app/')}
+          onClick={() => handleCardClick('Snap & Eat', 'https://snap-eat-china.onrender.com/')}
           className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left relative overflow-hidden animate-fadeInUp"
           style={{ animationDelay: '100ms' }}
         >
