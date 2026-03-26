@@ -15,6 +15,7 @@ export interface Translations {
     title: string;
     cta: string;
   };
+  wip: string;
 }
 
 export const translations: Record<Language, Translations> = {
@@ -32,7 +33,8 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Exclusive Offer",
       title: "Dining Rewards",
       cta: "Learn more"
-    }
+    },
+    wip: "WIP"
   },
   zh: {
     welcomePrefix: "欢迎来到您的",
@@ -48,7 +50,8 @@ export const translations: Record<Language, Translations> = {
       subtitle: "专属优惠",
       title: "餐饮奖励",
       cta: "了解更多"
-    }
+    },
+    wip: "进行中"
   },
   ja: {
     welcomePrefix: "ようこそ",
@@ -64,7 +67,8 @@ export const translations: Record<Language, Translations> = {
       subtitle: "限定オファー",
       title: "ダイニング特典",
       cta: "詳細を見る"
-    }
+    },
+    wip: "準備中"
   },
   ko: {
     welcomePrefix: "환영합니다",
@@ -80,7 +84,8 @@ export const translations: Record<Language, Translations> = {
       subtitle: "단독 혜택",
       title: "다이닝 리워드",
       cta: "자세히 보기"
-    }
+    },
+    wip: "준비 중"
   },
   th: {
     welcomePrefix: "ยินดีต้อนรับสู่",
@@ -96,7 +101,8 @@ export const translations: Record<Language, Translations> = {
       subtitle: "ข้อเสนอสุดพิเศษ",
       title: "รางวัลการรับประทานอาหาร",
       cta: "ดูรายละเอียด"
-    }
+    },
+    wip: "กำลังดำเนินการ"
   },
   vi: {
     welcomePrefix: "Chào mừng bạn đến với",
@@ -112,7 +118,8 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Ưu đãi độc quyền",
       title: "Phần thưởng ẩm thực",
       cta: "Tìm hiểu thêm"
-    }
+    },
+    wip: "Đang thực hiện"
   },
   fr: {
     welcomePrefix: "Bienvenue sur votre",
@@ -128,7 +135,8 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Offre Exclusive",
       title: "Récompenses Restauration",
       cta: "En savoir plus"
-    }
+    },
+    wip: "En cours"
   },
   de: {
     welcomePrefix: "Willkommen in Ihrem",
@@ -144,7 +152,8 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Exklusives Angebot",
       title: "Dining Prämien",
       cta: "Mehr erfahren"
-    }
+    },
+    wip: "In Arbeit"
   },
   es: {
     welcomePrefix: "Bienvenido a su",
@@ -160,6 +169,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Oferta Exclusiva",
       title: "Premios Gastronómicos",
       cta: "Más información"
-    }
+    },
+    wip: "En progreso"
   }
 };

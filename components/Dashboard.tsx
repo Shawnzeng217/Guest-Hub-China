@@ -75,49 +75,51 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
           </div>
         </a>
 
-        {/* Card 3: Digital Concierge */}
-        <a
-          href="https://companion-revamp.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => handleCardClick('Digital Concierge', 'https://companion-revamp.vercel.app/')}
-          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left relative overflow-hidden animate-fadeInUp"
+        {/* Card 3: Digital Concierge - WIP */}
+        <div
+          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl shadow-premium h-44 w-full text-left relative overflow-hidden animate-fadeInUp cursor-default"
           style={{ animationDelay: '200ms' }}
         >
           {/* Background Image & Overlay */}
           <img src="/images/card-translator.jpg" alt="Background" className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-500 group-hover:scale-110" />
           <div className="absolute inset-0 bg-black/50 z-0 backdrop-blur-[0.5px]"></div>
 
-          <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors relative z-10">
+          {/* WIP Badge */}
+          <div className="absolute top-3 right-3 z-20 px-2 py-0.5 rounded-full bg-primary/80 backdrop-blur-sm text-[10px] font-bold text-white uppercase tracking-wider">
+            {t.wip}
+          </div>
+
+          <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm relative z-10">
             <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>luggage</span>
           </div>
           <div className="relative z-10">
             <h3 className="text-white text-lg font-semibold leading-tight mb-1">{t.cards.concierge.title}</h3>
             <p className="text-white text-xs italic">{t.cards.concierge.desc}</p>
           </div>
-        </a>
+        </div>
 
-        {/* Card 4: AI Fitness Coach */}
-        <a
-          href="https://petershenfk.github.io/Smart-Fitness-Coach-New/"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => handleCardClick('Magic Mirror', 'https://petershenfk.github.io/Smart-Fitness-Coach-New/')}
-          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left relative overflow-hidden animate-fadeInUp"
+        {/* Card 4: AI Fitness Coach - WIP */}
+        <div
+          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl shadow-premium h-44 w-full text-left relative overflow-hidden animate-fadeInUp cursor-default"
           style={{ animationDelay: '300ms' }}
         >
           {/* Background Image & Overlay */}
           <img src="/images/card-fitness.jpg" alt="Background" className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-500 group-hover:scale-110" />
           <div className="absolute inset-0 bg-black/50 z-0 backdrop-blur-[0.5px]"></div>
 
-          <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors relative z-10">
+          {/* WIP Badge */}
+          <div className="absolute top-3 right-3 z-20 px-2 py-0.5 rounded-full bg-primary/80 backdrop-blur-sm text-[10px] font-bold text-white uppercase tracking-wider">
+            {t.wip}
+          </div>
+
+          <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm relative z-10">
             <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>fitness_center</span>
           </div>
           <div className="relative z-10">
             <h3 className="text-white text-lg font-semibold leading-tight mb-1">{t.cards.fitness.title}</h3>
             <p className="text-white text-xs italic">{t.cards.fitness.desc}</p>
           </div>
-        </a>
+        </div>
 
         {/* Card 5: Placeholder 1 (Coming Soon) */}
         <div
