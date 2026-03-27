@@ -154,7 +154,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
       <div className="mt-6 rounded-xl overflow-hidden relative h-32 w-full shadow-lg group cursor-pointer">
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-          style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuB26nqtU_Z30VKwpvXx2KZyEF--Vd2H2GVjctSHZyYLmXcZV05Q2W2xL-P3zRLj10ae3tNYa9_EbkOfjr4fqLnan5PljtBQRg8X2sZx8wLr99psmoJxzn9bMs9PJxSdyIhBkFtk4W1p3Fb9Z3Oz0bYDHGZEQ9lVcG89CvGqtkHFruPv6FglT4AsV7Cd-IV6YWEvMJKJKsvdv56mbYqEa2MHjY1hoYzizkMHtBOXRkQZ-harzEpf9kLQjk8bDey2tA8P_lYGEkqsAyxb')" }}
+          style={{ backgroundImage: "url('/images/card-food.png')" }}
         ></div>
         <div className="absolute inset-0 bg-hilton-blue/80 mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex flex-col justify-center px-6">
