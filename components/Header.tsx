@@ -22,6 +22,20 @@ const languages: { code: Language; name: string; flag: string }[] = [
 const Header: React.FC<HeaderProps> = ({ onBack, showBack = false }) => {
   const { language, setLanguage, t } = useLanguage();
   const [showLangMenu, setShowLangMenu] = useState(false);
+
+  const handleLanguageChange = (code: Language, name: string) => {
+    if (window.gtag) {
+      window.gtag('event', 'language_change', {
+        event_category: 'Header',
+        event_label: name,
+        language_code: code,
+        language_name: name
+      });
+    }
+    setLanguage(code);
+    setShowLangMenu(false);
+  };
+
   return (
     <div className="bg-hilton-blue w-full rounded-b-2xl shadow-lg relative z-10 transition-all duration-300 min-h-[88px] flex flex-col justify-center">
       {/* Top App Bar - Absolute to not affect centering */}
@@ -54,10 +68,7 @@ const Header: React.FC<HeaderProps> = ({ onBack, showBack = false }) => {
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
-                      onClick={() => {
-                        setLanguage(lang.code);
-                        setShowLangMenu(false);
-                      }}
+                      onClick={() => handleLanguageChange(lang.code, lang.name)}
                       className={`w-full flex items-center px-4 py-3 text-sm transition-colors hover:bg-gray-50 ${language === lang.code ? 'text-primary font-semibold bg-primary/5' : 'text-gray-700'}`}
                     >
                       <span className="mr-3 text-lg leading-none">{lang.flag}</span>
