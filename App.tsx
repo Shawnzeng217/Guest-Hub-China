@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Dashboard from './components/Dashboard';
 
 import ImageEditor from './components/ImageEditor';
 import { ViewState } from './types';
 import { LanguageProvider } from './context/LanguageContext';
+import { trackPageView } from './services/adobeTracking';
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<ViewState>('HOME');
+
+  // Track page view on initial load
+  useEffect(() => {
+    trackPageView();
+  }, []);
 
   const [direction, setDirection] = useState<'forward' | 'backward'>('forward');
 
